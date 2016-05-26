@@ -1,0 +1,23 @@
+{
+  "name": "texen-samples",
+  "description": "Sample formulas for Texen (Texture Engine)",
+  "version": "1.0.0",
+  "author": "Jan Forst <ensonador@gmail.com>",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7"
+  },
+  "keywords": [
+    "texen"
+  ],
+  "license": "MIT",
+  "main": "dist/texen-samples.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
