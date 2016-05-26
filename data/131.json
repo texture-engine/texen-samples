@@ -1,0 +1,139 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1.2,
+            "source": "blendcolors-9"
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "heighthill-1",
+            "min": 0,
+            "max": 1.5,
+            "gradient": "gradient-1",
+            "invert": true
+        },
+        "gradient-2": {
+            "type": "Gradient",
+            "source": "scale",
+            "min": -0.2,
+            "max": 1.4,
+            "gradient": "gradient-2",
+            "invert": true
+        },
+        "blendcolors-1": {
+            "type": "Blend",
+            "mode": 28,
+            "source": "gradient-1",
+            "blend": "gradient-2"
+        },
+        "blendcolors-9": {
+            "type": "Blend",
+            "mode": 3,
+            "source": "blendcolors-1",
+            "blend": "shadingflat-1"
+        },
+        "shadingflat-1": {
+            "type": "ShadingFlat",
+            "source": "scale",
+            "mingray": 66,
+            "maxgray": 255,
+            "lightX": 0.7,
+            "lightY": 0.6,
+            "lightZ": -0.1,
+            "size": 64
+        }
+    },
+    "functions": {
+        "heighthill-1": {
+            "type": "HeightHill",
+            "mode": 1,
+            "seed": 13,
+            "iterations": 211,
+            "hillmin": 0.05,
+            "hillmax": 0.075,
+            "size": 256
+        },
+        "heighthill-2": {
+            "type": "Voronoi",
+            "seed": 0,
+            "distance": 5,
+            "voronoi": 1
+        },
+        "scale": {
+            "type": "Scale",
+            "source": "heighthill-2",
+            "x": 2.5,
+            "y": 2.5,
+            "z": 0.5
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                255,
+                255,
+                255
+            ],
+            [
+                97,
+                228,
+                187,
+                210
+            ],
+            [
+                136,
+                231,
+                200,
+                131
+            ],
+            [
+                149,
+                232,
+                139,
+                74
+            ],
+            [
+                198,
+                241,
+                148,
+                145
+            ],
+            [
+                232,
+                116,
+                104,
+                164
+            ],
+            [
+                252,
+                22,
+                57,
+                168
+            ]
+        ],
+        "gradient-2": [
+            [
+                0,
+                128,
+                128,
+                128
+            ],
+            [
+                102,
+                245,
+                245,
+                245
+            ],
+            [
+                255,
+                0,
+                0,
+                0
+            ]
+        ]
+    }
+}

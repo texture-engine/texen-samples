@@ -1,0 +1,73 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 7,
+            "source": "gray-0",
+            "fill": false
+        }
+    },
+    "textures": {
+        "gray-0": {
+            "type": "Gray",
+            "source": "blend-2",
+            "min": 0,
+            "max": 1,
+            "invert": false
+        }
+    },
+    "functions": {
+        "translate-1": {
+            "type": "Translate",
+            "x": 3.14,
+            "source": "normalize-0",
+            "y": 9.44
+        },
+        "normalize-0": {
+            "type": "Equalize",
+            "source": "blend-1",
+            "samplesA": 8,
+            "samplesB": 8,
+            "samplesC": 8,
+            "outMin": -1,
+            "outMax": 0,
+            "steps": 128
+        },
+        "function-1": {
+            "type": "Normalize",
+            "source": "misc-1",
+            "invert": false,
+            "outMin": -1,
+            "outMax": 1
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 5
+        },
+        "function-2": {
+            "type": "Normalize",
+            "source": "misc-2",
+            "outMin": -1,
+            "outMax": 1,
+            "invert": false,
+            "noAuto": false,
+            "noClamp": false
+        },
+        "misc-2": {
+            "type": "Misc",
+            "misc": 4
+        },
+        "blend-1": {
+            "type": "Blend",
+            "source": "function-1",
+            "blend": "function-2",
+            "mode": 1
+        },
+        "blend-2": {
+            "type": "Blend",
+            "source": "blend-1",
+            "blend": "translate-1",
+            "mode": 8
+        }
+    }
+}

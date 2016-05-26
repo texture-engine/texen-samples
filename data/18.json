@@ -1,0 +1,78 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 4.1,
+            "source": "hsl-1"
+        }
+    },
+    "textures": {
+        "hsl-1": {
+            "type": "RGB",
+            "sourceR": "scale-3",
+            "sourceG": "scale-2",
+            "sourceB": "scale-1",
+            "invertB": true,
+            "invertG": true,
+            "invertR": false,
+            "maxB": 1,
+            "maxG": 1,
+            "maxR": 0.4,
+            "minB": 0,
+            "minG": 0.2,
+            "minR": 0.7
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "noise-1"
+        },
+        "noise-1": {
+            "type": "Noise",
+            "seed": 0
+        },
+        "noise-2": {
+            "type": "Noise",
+            "seed": 18
+        },
+        "noise-3": {
+            "type": "Noise",
+            "seed": 2
+        },
+        "normalize-2": {
+            "type": "Normalize",
+            "source": "noise-2",
+            "invert": false,
+            "signed": false
+        },
+        "normalize-3": {
+            "type": "Normalize",
+            "source": "noise-3",
+            "invert": false,
+            "signed": false
+        },
+        "scale-1": {
+            "type": "Scale",
+            "source": "normalize-1",
+            "x": 20,
+            "y": 1,
+            "z": 1
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "normalize-2",
+            "x": 19,
+            "y": 0.9,
+            "z": 1
+        },
+        "scale-3": {
+            "type": "Scale",
+            "source": "normalize-3",
+            "x": 21,
+            "y": 1.1,
+            "z": 1
+        }
+    },
+    "gradients": {}
+}

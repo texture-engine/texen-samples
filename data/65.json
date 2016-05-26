@@ -1,0 +1,117 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1.8,
+            "source": "gradient-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "blend-1",
+            "min": -0.4,
+            "max": 1.2,
+            "gradient": "gradient-1",
+            "invert": false
+        }
+    },
+    "functions": {
+        "warp-1": {
+            "type": "Warp",
+            "source": "scale-1",
+            "warp": "scale-2",
+            "intensity": 0.03
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "multifractal-1",
+            "x": 6,
+            "y": 2,
+            "z": 1
+        },
+        "voronoi-1": {
+            "type": "Voronoi",
+            "seed": 81,
+            "voronoi": 0,
+            "distance": 0
+        },
+        "noise-1": {
+            "type": "Noise",
+            "seed": 101123,
+            "test": true
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 1
+        },
+        "scale-1": {
+            "type": "Scale",
+            "source": "misc-1",
+            "x": 80,
+            "y": 40,
+            "z": 1
+        },
+        "multifractal-1": {
+            "type": "MultiFractal",
+            "source": "noise-1",
+            "H": 0.75,
+            "lacunarity": 2,
+            "octaves": 7
+        },
+        "warp-2": {
+            "type": "Warp",
+            "source": "scale-3",
+            "warp": "voronoi-1",
+            "intensity": 0.6
+        },
+        "scale-3": {
+            "type": "Scale",
+            "source": "voronoi-1",
+            "x": 7,
+            "y": 1,
+            "z": 1
+        },
+        "blend-1": {
+            "type": "Blend",
+            "source": "warp-2",
+            "blend": "warp-1",
+            "mode": 9
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                45,
+                0,
+                0,
+                0
+            ],
+            [
+                152,
+                151,
+                66,
+                89
+            ],
+            [
+                164,
+                209,
+                140,
+                0
+            ],
+            [
+                188,
+                243,
+                224,
+                142
+            ],
+            [
+                244,
+                240,
+                255,
+                172
+            ]
+        ]
+    }
+}

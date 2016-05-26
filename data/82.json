@@ -1,0 +1,94 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1,
+            "source": "hsl-1"
+        }
+    },
+    "textures": {
+        "hsl-1": {
+            "type": "HSL",
+            "sourceH": "scale-1",
+            "sourceS": "scale-2",
+            "sourceL": "scale-3",
+            "minH": 0,
+            "maxH": 1,
+            "minS": 0,
+            "maxS": 0.5,
+            "minL": 0,
+            "maxL": 1,
+            "invertH": false,
+            "invertS": false,
+            "invertL": false
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "noise-1",
+            "invert": false,
+            "signed": false,
+            "noAuto": true,
+            "outMax": 1,
+            "outMin": 0.5
+        },
+        "normalize-3": {
+            "type": "Normalize",
+            "source": "noise-3",
+            "invert": false,
+            "signed": false,
+            "noAuto": true,
+            "outMax": 1,
+            "outMin": -0.5,
+            "noClamp": false
+        },
+        "noise-1": {
+            "type": "Noise",
+            "seed": 0
+        },
+        "noise-2": {
+            "type": "Noise",
+            "seed": 0
+        },
+        "noise-3": {
+            "type": "Noise",
+            "seed": 3
+        },
+        "normalize-2": {
+            "type": "Normalize",
+            "source": "noise-2",
+            "outMin": -0.4,
+            "outMax": 0.6,
+            "noAuto": true
+        },
+        "scale-1": {
+            "type": "Scale",
+            "source": "normalize-1",
+            "y": 1.1,
+            "z": 1,
+            "x": 0.7
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "normalize-2",
+            "x": 2,
+            "y": 26,
+            "z": 2
+        },
+        "scale-3": {
+            "type": "Scale",
+            "source": "biasgain-1",
+            "x": 1,
+            "y": 32,
+            "z": 32
+        },
+        "biasgain-1": {
+            "type": "BiasGain",
+            "source": "normalize-3",
+            "mode": 1,
+            "value": 0.42
+        }
+    },
+    "gradients": {}
+}

@@ -1,0 +1,104 @@
+{
+  "render": {
+    "texture-1": {
+      "type": "Texture",
+      "scale": 1.0,
+      "source": "blendcolors-4",
+      "fill": false
+    }
+  },
+  "textures": {
+    "shadingflat-1": {
+      "type": "ShadingFlat",
+      "source": "heighthill-1",
+      "mingray": 0,
+      "maxgray": 255,
+      "lightX": 1.0,
+      "lightY": 0.10000000149011612,
+      "lightZ": 1.0,
+      "size": 128
+    },
+    "shadow-1": {
+      "type": "Shadow",
+      "source": "heighthill-1",
+      "mingray": 223,
+      "maxgray": 255,
+      "lightX": 1.0,
+      "lightY": 1.0,
+      "lightZ": 1.0,
+      "accuracy": 1.0,
+      "size": 128
+    },
+    "gradient-1": {
+      "type": "Gradient",
+      "source": "heighthill-1",
+      "min": 0.0,
+      "max": 1.0,
+      "gradient": "gradient-1",
+      "invert": false
+    },
+    "blendcolors-3": {
+      "type": "Blend",
+      "mode": 3,
+      "source": "shadingflat-1",
+      "blend": "shadow-1"
+    },
+    "blendcolors-4": {
+      "type": "Blend",
+      "mode": 3,
+      "source": "gradient-1",
+      "blend": "blendcolors-3"
+    }
+  },
+  "functions": {
+    "heighthill-1": {
+      "type": "HeightHill",
+      "mode": 1,
+      "seed": 3,
+      "iterations": 4000,
+      "hillmin": 0.019999999552965164,
+      "hillmax": 0.071000002324581146,
+      "size": 128
+    }
+  },
+  "gradients": {
+    "gradient-1": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        19,
+        255,
+        215,
+        0
+      ],
+      [
+        87,
+        173,
+        255,
+        47
+      ],
+      [
+        145,
+        34,
+        139,
+        34
+      ],
+      [
+        198,
+        169,
+        169,
+        169
+      ],
+      [
+        250,
+        240,
+        255,
+        255
+      ]
+    ]
+  }
+}

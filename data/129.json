@@ -1,0 +1,111 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 9,
+            "source": "gradient-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": false
+        }
+    },
+    "functions": {
+        "noise-1": {
+            "type": "Noise",
+            "seed": 1011,
+            "test": true
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "warp-1",
+            "invert": false,
+            "noAuto": false,
+            "noClamp": false
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 5
+        },
+        "warp-1": {
+            "type": "Warp",
+            "source": "scale-1",
+            "warp": "scale-2",
+            "intensity": 0.2,
+            "x": 0,
+            "y": 0
+        },
+        "scale-1": {
+            "type": "Scale",
+            "source": "blend-1",
+            "x": 0.4,
+            "y": 0.4,
+            "z": 1
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "multifractal-1",
+            "x": 10,
+            "y": 0.1,
+            "z": 1
+        },
+        "multifractal-1": {
+            "type": "MultiFractal",
+            "source": "noise-1",
+            "H": 0.75,
+            "lacunarity": 2,
+            "octaves": 7
+        },
+        "misc-2": {
+            "type": "Misc",
+            "misc": 0
+        },
+        "blend-1": {
+            "type": "Blend",
+            "source": "misc-1",
+            "blend": "misc-2",
+            "mode": 20
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                16,
+                206,
+                64,
+                120
+            ],
+            [
+                82,
+                127,
+                11,
+                118
+            ],
+            [
+                140,
+                193,
+                184,
+                221
+            ],
+            [
+                192,
+                212,
+                185,
+                185
+            ],
+            [
+                255,
+                255,
+                248,
+                254
+            ]
+        ]
+    }
+}

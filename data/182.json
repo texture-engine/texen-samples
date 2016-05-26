@@ -1,0 +1,45 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 1,
+            "source": "hsl-1"
+        }
+    },
+    "textures": {
+        "hsl-1": {
+            "type": "HSL",
+            "sourceH": "function-1",
+            "sourceS": "misc-3",
+            "sourceL": "misc-2",
+            "minH": 0,
+            "maxH": 1,
+            "invertH": false,
+            "minS": 0,
+            "maxS": 1,
+            "invertS": false,
+            "minL": 0,
+            "maxL": 1,
+            "invertL": false
+        }
+    },
+    "gradients": {},
+    "functions": {
+        "function-1": {
+            "type": "Normalize",
+            "source": "misc-1"
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 13
+        },
+        "misc-3": {
+            "type": "Constant",
+            "value": 1
+        },
+        "misc-2": {
+            "type": "Misc",
+            "misc": 11
+        }
+    }
+}

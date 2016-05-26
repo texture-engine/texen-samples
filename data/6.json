@@ -1,0 +1,137 @@
+{
+  "render": {
+    "texture-1": {
+      "type": "Texture",
+      "scale": 1.0,
+      "source": "blendcolors-2"
+    }
+  },
+  "textures": {
+    "gradient-1": {
+      "type": "Gradient",
+      "source": "seamless-1",
+      "min": 0.0,
+      "max": 1.0,
+      "gradient": "gradient-1",
+      "invert": false
+    },
+    "gradient-2": {
+      "type": "Gradient",
+      "source": "heighthill-1",
+      "min": 0.0,
+      "max": 1.0,
+      "gradient": "gradient-2",
+      "invert": false
+    },
+    "blendcolors-1": {
+      "type": "Blend",
+      "mode": 17,
+      "source": "gradient-1",
+      "blend": "gradient-3"
+    },
+    "blendcolors-2": {
+      "type": "Blend",
+      "mode": 17,
+      "source": "blendcolors-1",
+      "blend": "gradient-2"
+    },
+    "gradient-3": {
+      "type": "Gradient",
+      "source": "heightfractal-1",
+      "min": 0.0,
+      "max": 1.0,
+      "gradient": "gradient-3",
+      "invert": false
+    }
+  },
+  "functions": {
+    "heightfault-1": {
+      "type": "HeightFault",
+      "mode": 1,
+      "seed": 9,
+      "size": 256,
+      "iterations": 12,
+      "dispmin": 1.4901160305669237E-09,
+      "dispmax": 0.10000000149011612,
+      "wavemin": 0.015000000596046448,
+      "wavemax": 0.019999999552965164
+    },
+    "seamless-1": {
+      "type": "Seamless",
+      "source": "heightfault-1"
+    },
+    "heighthill-1": {
+      "type": "HeightHill",
+      "mode": 0,
+      "seed": 0,
+      "iterations": 80,
+      "hillmin": 0.029999999329447746,
+      "hillmax": 0.039999999105930328
+    },
+    "heightfractal-1": {
+      "type": "HeightFractal",
+      "mode": 1,
+      "seed": 0,
+      "iterations": 10,
+      "hurst": 0.19999997317790985,
+      "scale": 1.0,
+      "convexity": 0.0
+    }
+  },
+  "gradients": {
+    "gradient-1": [
+      [
+        0,
+        255,
+        140,
+        0
+      ],
+      [
+        255,
+        255,
+        255,
+        255
+      ]
+    ],
+    "gradient-2": [
+      [
+        213,
+        138,
+        43,
+        226
+      ],
+      [
+        0,
+        255,
+        255,
+        255
+      ],
+      [
+        255,
+        72,
+        61,
+        139
+      ]
+    ],
+    "gradient-3": [
+      [
+        0,
+        86,
+        57,
+        48
+      ],
+      [
+        255,
+        255,
+        255,
+        255
+      ],
+      [
+        16,
+        128,
+        128,
+        128
+      ]
+    ]
+  }
+}

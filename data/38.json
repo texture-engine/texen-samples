@@ -1,0 +1,94 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 8.8,
+            "source": "blend-1",
+            "fill": false
+        }
+    },
+    "textures": {
+        "gray-0": {
+            "type": "Gray",
+            "source": "blend-2",
+            "min": 0.73,
+            "max": 0.78,
+            "invert": true
+        },
+        "gray-4": {
+            "type": "Gray",
+            "source": "function-4",
+            "min": 0.7,
+            "max": 0.72,
+            "invert": true
+        },
+        "blend-1": {
+            "type": "Blend",
+            "source": "gray-4",
+            "blend": "gray-0",
+            "mode": 2
+        }
+    },
+    "functions": {
+        "translate-1": {
+            "type": "Translate",
+            "x": 3.1415,
+            "source": "normalize-0",
+            "y": 10.8
+        },
+        "normalize-0": {
+            "type": "Normalize",
+            "source": "blend-1",
+            "invert": false,
+            "signed": false
+        },
+        "function-1": {
+            "type": "Normalize",
+            "source": "misc-1",
+            "outMin": -1,
+            "outMax": 1
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 5
+        },
+        "function-2": {
+            "type": "Normalize",
+            "source": "misc-2",
+            "outMin": -1,
+            "outMax": 1
+        },
+        "misc-2": {
+            "type": "Misc",
+            "misc": 4
+        },
+        "blend-1": {
+            "type": "Blend",
+            "source": "function-1",
+            "blend": "function-2",
+            "mode": 1
+        },
+        "blend-2": {
+            "type": "Blend",
+            "source": "blend-1",
+            "blend": "translate-1",
+            "mode": 8
+        },
+        "function-4": {
+            "type": "Normalize",
+            "source": "translate-4",
+            "invert": false,
+            "signed": false
+        },
+        "misc-4": {
+            "type": "Misc",
+            "misc": 1
+        },
+        "translate-4": {
+            "type": "Translate",
+            "source": "misc-4",
+            "x": 0,
+            "y": -0.8
+        }
+    }
+}

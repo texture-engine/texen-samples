@@ -1,0 +1,46 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 1,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1
+        }
+    },
+    "functions": {
+        "transform-1": {
+            "type": "Translate",
+            "source": "voronoilines-1",
+            "y": 10.4,
+            "x": 22,
+            "z": 0
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "tiles-1",
+            "invert": false
+        },
+        "tiles-1": {
+            "type": "Tiles",
+            "source": "transform-1",
+            "x": 6,
+            "y": 6,
+            "z": 3,
+            "mirrorX": true,
+            "mirrorY": true,
+            "mirrorZ": false
+        },
+        "voronoilines-1": {
+            "type": "VoronoiLines",
+            "low": 0.05,
+            "high": 0.1
+        }
+    }
+}

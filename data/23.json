@@ -1,0 +1,36 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 1.49,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "invert": true
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "multifractal-1",
+            "invert": false
+        },
+        "multifractal-1": {
+            "type": "MultiFractal",
+            "source": "misc-1",
+            "H": 1,
+            "lacunarity": 2,
+            "octaves": 6
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 7
+        }
+    }
+}

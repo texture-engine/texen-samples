@@ -1,0 +1,54 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 4.6,
+            "source": "gradient-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": -0.1,
+            "max": 0.9,
+            "gradient": "gradient-1",
+            "invert": true
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "filter-1",
+            "invert": false
+        },
+        "filter-1": {
+            "type": "Filter",
+            "source": "misc-1",
+            "filter": 9,
+            "x": 0.15,
+            "y": 0.15
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 3
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                11,
+                63,
+                100
+            ],
+            [
+                255,
+                29,
+                255,
+                63
+            ]
+        ]
+    }
+}

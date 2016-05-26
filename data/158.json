@@ -1,0 +1,41 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 0.75,
+            "source": "gray-1",
+            "fill": false
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "invert": false
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "turbulence-1",
+            "invert": false,
+            "outMax": 1,
+            "outMin": 0.25
+        },
+        "turbulence-1": {
+            "type": "Turbulence",
+            "source": "dots-1",
+            "H": -1,
+            "lacunarity": 1.8,
+            "octaves": 4.9
+        },
+        "dots-1": {
+            "type": "Dots",
+            "low": 0.1,
+            "high": 1,
+            "mode": 1
+        }
+    }
+}

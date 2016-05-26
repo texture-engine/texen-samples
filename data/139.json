@@ -1,0 +1,75 @@
+{
+    "render": {
+        "box-1": {
+            "type": "Box",
+            "scale": 1,
+            "source": "alphafunctioncolors-1",
+            "sphere": true,
+            "front": false
+        }
+    },
+    "textures": {
+        "skybody-1": {
+            "type": "SkyBody",
+            "gradient": "gradient-1"
+        },
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "sunflare-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-2",
+            "invert": false
+        },
+        "alphafunctioncolors-1": {
+            "type": "BlendAlphaFunction",
+            "opacity": "sunflare-1",
+            "source": "gradient-1",
+            "blend": "skybody-1"
+        }
+    },
+    "functions": {
+        "sunflare-1": {
+            "type": "SunFlare",
+            "positionX": 0,
+            "k1": 0.1,
+            "k2": 0.4
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                5,
+                22,
+                144
+            ],
+            [
+                151,
+                115,
+                171,
+                232
+            ],
+            [
+                255,
+                149,
+                221,
+                246
+            ]
+        ],
+        "gradient-2": [
+            [
+                216,
+                245,
+                215,
+                125
+            ],
+            [
+                255,
+                250,
+                255,
+                253
+            ]
+        ]
+    }
+}

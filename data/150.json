@@ -1,0 +1,20 @@
+{
+    "render": {
+        "box-1": {
+            "type": "Box",
+            "scale": 1,
+            "source": "rgbbox-1",
+            "sphere": false,
+            "front": true
+        }
+    },
+    "textures": {
+        "rgbbox-1": {
+            "type": "RgbBox"
+        }
+    },
+    "functions": {
+    },
+    "gradients": {
+    }
+}

@@ -1,0 +1,78 @@
+
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1.6,
+            "source": "blendcolors-1"
+        }
+    },
+    "textures": {
+        "shadingflat-1": {
+            "type": "ShadingFlat",
+            "source": "normalize-1",
+            "mingray": 110,
+            "maxgray": 255,
+            "lightX": -0.5,
+            "lightY": 0,
+            "lightZ": 0.1,
+            "size": 9
+        },
+        "blendcolors-1": {
+            "type": "Blend",
+            "mode": 15,
+            "source": "shadingflat-1",
+            "blend": "gradient-1"
+        },
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": true
+        }
+    },
+    "functions": {
+        "noise-1": {
+            "type": "Noise",
+            "seed": 6,
+            "test": true
+        },
+        "calculator-1": {
+            "type": "Calculator",
+            "source": "noise-1",
+            "formula": "abs((val*20)-rint(val*7))"
+        },
+        "turbulence-1": {
+            "type": "Turbulence",
+            "source": "calculator-1",
+            "H": 1.25,
+            "lacunarity": 1,
+            "octaves": 5.1
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "turbulence-1",
+            "samplesA": 200,
+            "invert": false,
+            "signed": false
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                237,
+                237,
+                237
+            ],
+            [
+                182,
+                121,
+                79,
+                69
+            ]
+        ]
+    }
+}

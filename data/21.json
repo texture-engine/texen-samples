@@ -1,0 +1,33 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 2.6,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "vlnoise-1",
+            "invert": false
+        },
+        "vlnoise-1": {
+            "type": "VLNoise",
+            "source": "misc-1",
+            "threshold": 0.28
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 7
+        }
+    }
+}

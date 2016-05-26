@@ -1,0 +1,20 @@
+{
+    "render": {
+        "box-1": {
+            "type": "Box",
+            "scale": 1,
+            "source": "hslbox-1",
+            "sphere": false,
+            "front": true
+        }
+    },
+    "textures": {
+        "hslbox-1": {
+            "type": "HslBox"
+        }
+    },
+    "functions": {
+    },
+    "gradients": {
+    }
+}

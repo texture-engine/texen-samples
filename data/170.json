@@ -1,0 +1,28 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 1.7,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "julia-1",
+            "min": 0,
+            "max": 0.4,
+            "invert": true
+        }
+    },
+    "functions": {
+        "julia-1": {
+            "type": "Julia",
+            "crop": false,
+            "x": -0.7,
+            "y": 0.3,
+            "max": 4,
+            "iterations": 256
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1.3,
+            "source": "shadingflat-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "shadingflat-1": {
+            "type": "ShadingFlat",
+            "source": "normalize-2",
+            "mingray": 0,
+            "maxgray": 255,
+            "lightX": 0.6,
+            "lightY": 0.1,
+            "lightZ": 0.2,
+            "size": 24
+        }
+    },
+    "gradients": {},
+    "functions": {
+        "noise-1": {
+            "type": "ImprovedNoise",
+            "seed": 2,
+            "test": true
+        },
+        "ridgedmultifractal-1": {
+            "type": "RidgedMultiFractal",
+            "source": "noise-1",
+            "H": 0.2,
+            "lacunarity": 1.9,
+            "octaves": 7,
+            "offset": 0.66,
+            "threshold": 2.8
+        },
+        "normalize-2": {
+            "type": "Normalize",
+            "source": "ridgedmultifractal-1",
+            "invert": true,
+            "outMin": -1,
+            "outMax": 1
+        }
+    }
+}

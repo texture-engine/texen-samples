@@ -1,0 +1,46 @@
+{
+  "render": {
+    "box-1": {
+      "type": "Box",
+      "scale": 1,
+      "source": "skybody-1",
+      "sphere": true,
+      "front": false
+    }
+  },
+  "textures": {
+    "skybody-1": {
+      "type": "SkyBody",
+      "gradient": "gradient-1"
+    }
+  },
+  "functions": {},
+  "gradients": {
+    "gradient-1": [
+      [
+        0,
+        25,
+        25,
+        112
+      ],
+      [
+        75,
+        77,
+        197,
+        177
+      ],
+      [
+        177,
+        240,
+        250,
+        148
+      ],
+      [
+        255,
+        240,
+        255,
+        255
+      ]
+    ]
+  }
+}

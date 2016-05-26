@@ -1,0 +1,67 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 3,
+            "source": "gradient-1"
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": true
+        }
+    },
+    "functions": {
+        "noise-1": {
+            "type": "Noise",
+            "seed": 0,
+            "test": true
+        },
+        "calculator-1": {
+            "type": "Steps",
+            "source": "noise-1",
+            "formula": "abs((val*20)-rint(val*7))",
+            "steps": 1,
+            "cut": true,
+            "to": 0.5,
+            "from": -0.5
+        },
+        "turbulence-1": {
+            "type": "Turbulence",
+            "source": "calculator-1",
+            "H": 0.1,
+            "lacunarity": 2.2,
+            "octaves": 8.25
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "turbulence-1",
+            "samplesA": 200,
+            "invert": false,
+            "signed": false,
+            "outMax": 1,
+            "outMin": 0
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                248,
+                255,
+                240
+            ],
+            [
+                255,
+                80,
+                103,
+                103
+            ]
+        ]
+    }
+}

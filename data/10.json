@@ -1,0 +1,97 @@
+{
+  "render": {
+    "texture-1": {
+      "type": "Texture",
+      "scale": 1.0,
+      "source": "alphafunctioncolors-1"
+    }
+  },
+  "textures": {
+    "gradient-1": {
+      "type": "Gradient",
+      "source": "heighthill-1",
+      "min": 0.0,
+      "max": 1.0,
+      "gradient": "gradient-1",
+      "invert": true
+    },
+    "gradient-2": {
+      "type": "Gradient",
+      "source": "heighthill-2",
+      "min": 0.0,
+      "max": 1.0,
+      "gradient": "gradient-2",
+      "invert": true
+    },
+    "alphafunctioncolors-1": {
+      "type": "BlendAlphaFunction",
+      "opacity": "normalize-1",
+      "source": "gradient-1",
+      "blend": "gradient-2"
+    }
+  },
+  "functions": {
+    "noise-1": {
+      "type": "Noise",
+      "seed": 1011,
+      "test": true
+    },
+    "normalize-1": {
+      "type": "Normalize",
+      "source": "scale-1"
+    },
+    "heighthill-1": {
+      "type": "HeightHill",
+      "mode": 0,
+      "seed": 6,
+      "iterations": 256,
+      "hillmin": 0.02500000037252903,
+      "hillmax": 0.10000000149011612
+    },
+    "heighthill-2": {
+      "type": "HeightHill",
+      "mode": 0,
+      "seed": 2,
+      "iterations": 256,
+      "hillmin": 0.0,
+      "hillmax": 0.075099997222423553
+    },
+    "scale-1": {
+      "type": "Scale",
+      "source": "noise-1",
+      "x": 150.0,
+      "y": 1.0,
+      "z": 1.0
+    }
+  },
+  "gradients": {
+    "gradient-1": [
+      [
+        0,
+        0,
+        0,
+        139
+      ],
+      [
+        255,
+        255,
+        255,
+        255
+      ]
+    ],
+    "gradient-2": [
+      [
+        0,
+        255,
+        140,
+        0
+      ],
+      [
+        255,
+        240,
+        248,
+        255
+      ]
+    ]
+  }
+}

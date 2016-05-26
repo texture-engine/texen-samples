@@ -1,0 +1,82 @@
+{
+  "render": {
+    "texture-1": {
+      "type": "Texture",
+      "scale": 1.0,
+      "source": "alphacolors-1"
+    }
+  },
+  "textures": {
+    "gradient-1": {
+      "type": "Gradient",
+      "source": "heighthill-1",
+      "min": 0.0,
+      "max": 1.0,
+      "gradient": "gradient-1",
+      "invert": true
+    },
+    "gradient-2": {
+      "type": "Gradient",
+      "source": "heighthill-2",
+      "min": 0.0,
+      "max": 1.0,
+      "gradient": "gradient-2",
+      "invert": true
+    },
+    "alphacolors-1": {
+      "type": "BlendAlpha",
+      "alpha": 0.5,
+      "source": "gradient-1",
+      "blend": "gradient-2"
+    }
+  },
+  "functions": {
+    "heighthill-1": {
+      "type": "HeightHill",
+      "mode": 0,
+      "seed": 1,
+      "iterations": 256,
+      "hillmin": 0.0,
+      "hillmax": 0.10000000149011612,
+      "size": 256
+    },
+    "heighthill-2": {
+      "type": "HeightHill",
+      "mode": 0,
+      "seed": 2,
+      "iterations": 256,
+      "hillmin": 0.0,
+      "hillmax": 0.10000000149011612
+    }
+  },
+  "gradients": {
+    "gradient-1": [
+      [
+        0,
+        0,
+        0,
+        139
+      ],
+      [
+        255,
+        255,
+        255,
+        255
+      ]
+    ],
+    "gradient-2": [
+      [
+        0,
+        255,
+        140,
+        0
+      ],
+      [
+        255,
+        240,
+        248,
+        255
+      ]
+    ]
+  }
+}

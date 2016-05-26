@@ -1,0 +1,121 @@
+{
+    "render": {
+        "box-1": {
+            "type": "Box",
+            "scale": 1,
+            "source": "blendcolors-1",
+            "sphere": true,
+            "front": true
+        }
+    },
+    "textures": {
+        "legacysky-1": {
+            "type": "LegacySky",
+            "sunglow": "sunglow-1",
+            "sunflare": "sunflare-1",
+            "clouds": "turbulence-1",
+            "skybody": "skybody-1"
+        },
+        "skybody-1": {
+            "type": "SkyBody",
+            "gradient": "gradient-1"
+        },
+        "blendcolors-1": {
+            "type": "Blend",
+            "mode": 9,
+            "source": "legacysky-1",
+            "blend": "gradient-1"
+        },
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "sunflare-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-2",
+            "invert": false
+        }
+    },
+    "functions": {
+        "noise-1": {
+            "type": "Noise",
+            "seed": 14,
+            "test": true
+        },
+        "turbulence-1": {
+            "type": "Turbulence",
+            "source": "noise-1",
+            "H": 0.5,
+            "lacunarity": 2,
+            "octaves": 4
+        },
+        "sunflare-1": {
+            "type": "SunFlare",
+            "width": 0.44,
+            "n": 6,
+            "k1": 0.48,
+            "k2": 0.3,
+            "positionX": -0.5,
+            "positionY": 0.6,
+            "positionZ": -1.2,
+            "directionX": -0.5,
+            "directionY": -0.2,
+            "directionZ": 0.2
+        },
+        "sunglow-1": {
+            "type": "SunGlow",
+            "k1": 1.5,
+            "k2": 1.5,
+            "positionX": -0.5,
+            "positionY": 0.6,
+            "positionZ": -1.2
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                106,
+                192,
+                122,
+                30
+            ],
+            [
+                190,
+                94,
+                231,
+                238
+            ],
+            [
+                251,
+                255,
+                255,
+                255
+            ]
+        ],
+        "gradient-2": [
+            [
+                130,
+                0,
+                0,
+                0
+            ],
+            [
+                212,
+                169,
+                169,
+                169
+            ],
+            [
+                248,
+                220,
+                220,
+                220
+            ]
+        ]
+    }
+}

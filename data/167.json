@@ -1,0 +1,40 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 7.5,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-2",
+            "min": 0,
+            "max": 1
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "dots-1",
+            "invert": false
+        },
+        "normalize-2": {
+            "type": "Normalize",
+            "source": "voronoizer-1",
+            "invert": false
+        },
+        "voronoizer-1": {
+            "type": "Voronoizer",
+            "source": "normalize-1"
+        },
+        "dots-1": {
+            "type": "Misc",
+            "low": 0.5,
+            "high": 1,
+            "mode": 0,
+            "misc": 1
+        }
+    }
+}

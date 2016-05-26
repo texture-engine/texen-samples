@@ -1,0 +1,80 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 3,
+            "source": "gradient-1"
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": -0.1,
+            "max": 1.2,
+            "gradient": "gradient-1",
+            "invert": true
+        }
+    },
+    "functions": {
+        "noise-1": {
+            "type": "Noise",
+            "seed": 27,
+            "test": true
+        },
+        "steps-1": {
+            "type": "Steps",
+            "source": "noise-1",
+            "steps": 25,
+            "cut": true,
+            "to": 0.96,
+            "from": 0
+        },
+        "turbulence-1": {
+            "type": "Turbulence",
+            "source": "steps-1",
+            "H": 0.3,
+            "lacunarity": 1.9,
+            "octaves": 6.5
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "turbulence-1",
+            "samplesA": 200,
+            "invert": false,
+            "signed": false,
+            "outMax": 1.1,
+            "outMin": 0,
+            "noAuto": false,
+            "noClamp": false
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                240,
+                255,
+                241
+            ],
+            [
+                125,
+                210,
+                228,
+                230
+            ],
+            [
+                180,
+                136,
+                154,
+                181
+            ],
+            [
+                255,
+                80,
+                89,
+                103
+            ]
+        ]
+    }
+}

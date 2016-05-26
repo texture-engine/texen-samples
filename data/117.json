@@ -1,0 +1,99 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 0.42,
+            "source": "blend",
+            "fill": true
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "scale-2",
+            "min": -0.5,
+            "max": 3.1,
+            "gradient": "gradient-1",
+            "invert": true
+        },
+        "shading": {
+            "type": "ShadingFlat",
+            "source": "normalize-1",
+            "size": 66,
+            "mingray": 66,
+            "lightX": 0.4,
+            "lightY": 0.2,
+            "lightZ": 0.3
+        },
+        "blend": {
+            "type": "Blend",
+            "blend": "shading",
+            "source": "gradient-1",
+            "mode": 6
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "warp-1",
+            "invert": false,
+            "signed": false,
+            "outMax": 0.7,
+            "noAuto": false,
+            "noClamp": false,
+            "samplesB": 512,
+            "samplesC": 512,
+            "samplesA": 512,
+            "range": 5
+        },
+        "warp-1": {
+            "type": "Warp",
+            "source": "voronoi-1",
+            "warp": "scale-2",
+            "intensity": 0.2,
+            "x": 9.5,
+            "y": 9.3
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "voronoi-1",
+            "x": 6,
+            "y": 6,
+            "z": 1
+        },
+        "voronoi-1": {
+            "type": "Voronoi",
+            "seed": 9,
+            "voronoi": 0,
+            "distance": 0
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                255,
+                255,
+                255
+            ],
+            [
+                131,
+                105,
+                40,
+                99
+            ],
+            [
+                173,
+                202,
+                106,
+                88
+            ],
+            [
+                255,
+                255,
+                255,
+                255
+            ]
+        ]
+    }
+}

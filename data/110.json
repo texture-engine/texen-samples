@@ -1,0 +1,69 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 4,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gradient",
+            "source": "biasgain-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1"
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "fbm-1",
+            "invert": false,
+            "noAuto": false,
+            "outMax": 1,
+            "outMin": 0.1
+        },
+        "biasgain-1": {
+            "type": "BiasGain",
+            "source": "normalize-1",
+            "mode": 1,
+            "value": 0.3
+        },
+        "fbm-1": {
+            "type": "FBm",
+            "source": "voronoi-1",
+            "H": 0.3,
+            "lacunarity": 1.7,
+            "octaves": 7
+        },
+        "voronoi-1": {
+            "type": "ImprovedNoise",
+            "seed": 54,
+            "voronoi": 5,
+            "distance": 7
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                5,
+                5,
+                5
+            ],
+            [
+                141,
+                188,
+                80,
+                30
+            ],
+            [
+                255,
+                244,
+                235,
+                192
+            ]
+        ]
+    }
+}

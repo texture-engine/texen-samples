@@ -1,0 +1,40 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 1.4,
+            "source": "gray-1",
+            "fill": false
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "invert": true
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "rotate3d-1",
+            "invert": false,
+            "signed": false
+        },
+        "rotate3d-1": {
+            "type": "Rotate",
+            "source": "voronoi-1",
+            "x": 0.5,
+            "y": 0.3,
+            "z": 0.25
+        },
+        "voronoi-1": {
+            "type": "Voronoi",
+            "seed": 3,
+            "voronoi": 0,
+            "distance": 6
+        }
+    }
+}

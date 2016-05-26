@@ -1,0 +1,33 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 0.005,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "translate-1",
+            "min": -0.05,
+            "max": 0.25,
+            "invert": true
+        }
+    },
+    "functions": {
+        "translate-1": {
+            "type": "Translate",
+            "source": "mandelbrot-1",
+            "x": 0,
+            "y": 0.81,
+            "z": 0
+        },
+        "mandelbrot-1": {
+            "type": "Mandelbrot",
+            "mode": 2,
+            "max": 2,
+            "iterations": 36
+        }
+    }
+}

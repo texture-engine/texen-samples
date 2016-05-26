@@ -1,0 +1,28 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 8,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "improvednoise-1",
+            "invert": false
+        },
+        "improvednoise-1": {
+            "type": "ImprovedNoise",
+            "seed": 11
+        }
+    }
+}

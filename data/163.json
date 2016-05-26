@@ -1,0 +1,28 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 3,
+            "source": "gray-1",
+            "fill": false
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "invert": false
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "voronoilines-1"
+        },
+        "voronoilines-1": {
+            "type": "VoronoiLines"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "render": {
+    "texture": {
+      "type": "Texture",
+      "scale": 7.25,
+      "source": "gray-1"
+    }
+  },
+  "textures": {
+    "gray-1": {
+      "type": "Gray",
+      "source": "normalize-1",
+      "min": 0,
+      "max": 1
+    }
+  },
+  "functions": {
+    "normalize-1": {
+      "type": "Normalize",
+      "source": "dots-1",
+      "invert": false
+    },
+    "dots-1": {
+      "type": "Dots",
+        "mode": 0
+    }
+  }
+}

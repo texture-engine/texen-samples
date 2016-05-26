@@ -1,0 +1,84 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1.5,
+            "source": "gradient-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": false
+        }
+    },
+    "functions": {
+        "noise-1": {
+            "type": "Noise",
+            "seed": 101157,
+            "test": true
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "warp-1"
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 4
+        },
+        "warp-1": {
+            "type": "Warp",
+            "source": "scale-1",
+            "warp": "scale-2",
+            "intensity": 0.8
+        },
+        "scale-1": {
+            "type": "Scale",
+            "source": "misc-1",
+            "x": 3.2,
+            "y": 13.1,
+            "z": 3
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "multifractal-1",
+            "x": 1.1,
+            "y": 3.9,
+            "z": 6.5
+        },
+        "multifractal-1": {
+            "type": "MultiFractal",
+            "source": "noise-1",
+            "H": 2.6,
+            "lacunarity": 0.6,
+            "octaves": 1.6
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                242,
+                252,
+                249
+            ],
+            [
+                69,
+                136,
+                137,
+                180
+            ],
+            [
+                210,
+                100,
+                37,
+                117
+            ]
+        ]
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 2,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "fbm-1",
+            "invert": false
+        },
+        "fbm-1": {
+            "type": "FBm",
+            "source": "cubist-1",
+            "H": 1,
+            "lacunarity": 2.9,
+            "octaves": 2.5
+        },
+        "cubist-1": {
+            "type": "Cubist",
+            "low": -2,
+            "high": 1
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 0.4,
+            "source": "gradient-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "warp-1",
+            "min": 0.6,
+            "max": 2.1,
+            "gradient": "gradient-1",
+            "invert": false
+        }
+    },
+    "functions": {
+        "warp-1": {
+            "type": "Warp",
+            "source": "voronoi-1",
+            "warp": "scale-2",
+            "intensity": 0.2
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "voronoi-1",
+            "x": 80,
+            "y": 0.1,
+            "z": 1
+        },
+        "voronoi-1": {
+            "type": "Voronoi",
+            "seed": 99,
+            "voronoi": 1,
+            "distance": 6
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                101,
+                70,
+                41,
+                57
+            ],
+            [
+                255,
+                247,
+                246,
+                218
+            ]
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 4,
+            "source": "gray-1",
+            "bumpScale": 2,
+            "fill": false
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1.1,
+            "invert": false
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "skew-1",
+            "invert": false,
+            "signed": false,
+            "noAuto": false
+        },
+        "skew-1": {
+            "type": "Skew",
+            "source": "dots-1",
+            "x": -0.2,
+            "y": -0.2,
+            "z": 0.77
+        },
+        "dots-1": {
+            "type": "Dots",
+            "low": 0.3,
+            "high": 0.8,
+            "mode": 1
+        }
+    }
+}

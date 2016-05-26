@@ -1,0 +1,185 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1,
+            "source": "blendcolors-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "tgradient-1": {
+            "type": "Gradient",
+            "source": "scale-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": false
+        },
+        "tgradient-2": {
+            "type": "Gradient",
+            "source": "scale-3",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-2",
+            "invert": false
+        },
+        "multimix-1": {
+            "type": "MultiMix",
+            "source": "normalize-2",
+            "min": 0,
+            "max": 1,
+            "mixmap": [
+                [
+                    0,
+                    "tgradient-1"
+                ],
+                [
+                    80,
+                    "tgradient-1"
+                ],
+                [
+                    100,
+                    "tgradient-3"
+                ],
+                [
+                    160,
+                    "tgradient-3"
+                ],
+                [
+                    200,
+                    "tgradient-2"
+                ],
+                [
+                    255,
+                    "tgradient-2"
+                ]
+            ],
+            "invert": false
+        },
+        "shadingflat-1": {
+            "type": "ShadingFlat",
+            "source": "normalize-2",
+            "mingray": 0,
+            "maxgray": 255,
+            "lightX": -0.5,
+            "lightY": 0,
+            "lightZ": 0.125,
+            "size": 512
+        },
+        "blendcolors-1": {
+            "type": "Blend",
+            "mode": 3,
+            "source": "multimix-1",
+            "blend": "shadingflat-1"
+        },
+        "tgradient-3": {
+            "type": "Gradient",
+            "source": "scale-2",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-3",
+            "invert": false
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "noise-1",
+            "invert": false,
+            "signed": false
+        },
+        "scale-1": {
+            "type": "Scale",
+            "source": "noise-1",
+            "x": 1,
+            "y": 64,
+            "z": 1
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "normalize-1",
+            "x": 128,
+            "y": 1,
+            "z": 1
+        },
+        "noise-1": {
+            "type": "Noise",
+            "seed": 1011,
+            "test": true
+        },
+        "scale-3": {
+            "type": "Scale",
+            "source": "normalize-1",
+            "x": 1,
+            "y": 128,
+            "z": 10
+        },
+        "ridgedmultifractal-1": {
+            "type": "RidgedMultiFractal",
+            "source": "noise-1",
+            "H": 0.15000000596046448,
+            "lacunarity": 2.75,
+            "octaves": 7,
+            "offset": 0.550000011920929,
+            "threshold": 2.75
+        },
+        "normalize-2": {
+            "type": "Normalize",
+            "source": "ridgedmultifractal-1",
+            "invert": true,
+            "outMin": -1,
+            "outMax": 1
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                0,
+                100,
+                0
+            ],
+            [
+                56,
+                0,
+                128,
+                0
+            ],
+            [
+                255,
+                0,
+                69,
+                0
+            ]
+        ],
+        "gradient-2": [
+            [
+                100,
+                255,
+                215,
+                0
+            ],
+            [
+                140,
+                34,
+                139,
+                34
+            ]
+        ],
+        "gradient-3": [
+            [
+                136,
+                34,
+                139,
+                34
+            ],
+            [
+                153,
+                127,
+                255,
+                0
+            ]
+        ]
+    }
+}

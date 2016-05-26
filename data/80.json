@@ -1,0 +1,83 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 9.6,
+            "source": "gradient-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": -0.3,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": false
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "blend-1",
+            "invert": false,
+            "signed": false
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 0
+        },
+        "scale-1": {
+            "type": "Scale",
+            "source": "misc-1",
+            "x": 0.2,
+            "y": 0.4,
+            "z": 1
+        },
+        "function-1": {
+            "type": "Normalize",
+            "source": "scale-1",
+            "outMin": -1,
+            "outMax": 1
+        },
+        "function-2": {
+            "type": "Normalize",
+            "source": "misc-2",
+            "signed": false,
+            "invert": true
+        },
+        "misc-2": {
+            "type": "Misc",
+            "misc": 4
+        },
+        "blend-1": {
+            "type": "Blend",
+            "source": "function-1",
+            "blend": "function-2",
+            "mode": 8
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                134,
+                48,
+                10,
+                189
+            ],
+            [
+                255,
+                227,
+                166,
+                250
+            ]
+        ]
+    }
+}

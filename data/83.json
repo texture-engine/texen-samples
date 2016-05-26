@@ -1,0 +1,88 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1.1,
+            "source": "blendcolors-1"
+        }
+    },
+    "textures": {
+        "shadingflat-1": {
+            "type": "ShadingFlat",
+            "source": "normalize-1",
+            "mingray": 110,
+            "maxgray": 255,
+            "lightX": -0.5,
+            "lightY": 0,
+            "lightZ": 0.10000000149011612,
+            "size": 128
+        },
+        "blendcolors-1": {
+            "type": "Blend",
+            "mode": 6,
+            "source": "gradient-1",
+            "blend": "shadingflat-1"
+        },
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": false
+        }
+    },
+    "functions": {
+        "noise-1": {
+            "type": "Noise",
+            "seed": 2,
+            "test": true
+        },
+        "calculator-1": {
+            "type": "Calculator",
+            "source": "noise-1",
+            "formula": "sin(val*5.75)"
+        },
+        "turbulence-1": {
+            "type": "Turbulence",
+            "source": "calculator-1",
+            "H": 1.25,
+            "lacunarity": 1.525,
+            "octaves": 2.75
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "turbulence-1",
+            "invert": false,
+            "signed": false
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                240,
+                248,
+                255
+            ],
+            [
+                124,
+                224,
+                255,
+                255
+            ],
+            [
+                154,
+                0,
+                0,
+                139
+            ],
+            [
+                200,
+                30,
+                144,
+                255
+            ]
+        ]
+    }
+}

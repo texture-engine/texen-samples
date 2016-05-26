@@ -1,0 +1,86 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 2,
+            "source": "gradient-1",
+            "fill": true
+        }
+    },
+    "textures": {
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": false
+        }
+    },
+    "functions": {
+        "noise-1": {
+            "type": "Noise",
+            "seed": 101123,
+            "test": true
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "warp-1",
+            "invert": false,
+            "signed": false
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 5
+        },
+        "warp-1": {
+            "type": "Warp",
+            "source": "scale-1",
+            "warp": "scale-2",
+            "intensity": 0.800000011920929
+        },
+        "scale-1": {
+            "type": "Scale",
+            "source": "misc-1",
+            "x": 5,
+            "y": 4.9,
+            "z": 1
+        },
+        "scale-2": {
+            "type": "Scale",
+            "source": "multifractal-1",
+            "x": 2,
+            "y": 2,
+            "z": 1
+        },
+        "multifractal-1": {
+            "type": "MultiFractal",
+            "source": "noise-1",
+            "H": 0.75,
+            "lacunarity": 2,
+            "octaves": 7
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                27,
+                209,
+                103,
+                0
+            ],
+            [
+                255,
+                255,
+                255,
+                172
+            ]
+        ]
+    }
+}

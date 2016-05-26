@@ -1,0 +1,54 @@
+{
+  "render": {
+    "box-1": {
+      "type": "Box",
+      "scale": 1,
+      "source": "skybody-1",
+      "sphere": true,
+      "front": false
+    }
+  },
+  "textures": {
+    "skybody-1": {
+      "type": "Gradient",
+      "gradient": "gradient-1",
+      "source": "scale"
+    }
+  },
+  "functions": {
+    "scale": {
+      "type": "Scale",
+      "x": 2.5,
+      "y": 25,
+      "z": 5,
+      "source": "noise-1"
+    },
+    "noise-1": {
+      "type": "Noise",
+      "seed": 2,
+      "test": true
+    }
+  },
+  "gradients": {
+    "gradient-1": [
+      [
+        0,
+        25,
+        25,
+        112
+      ],
+      [
+        159,
+        135,
+        206,
+        250
+      ],
+      [
+        255,
+        240,
+        255,
+        255
+      ]
+    ]
+  }
+}

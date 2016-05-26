@@ -1,0 +1,41 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 1.25,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 0.33,
+            "invert": true
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "fbm-1",
+            "invert": false,
+            "noAuto": false,
+            "outMax": 0.9,
+            "noClamp": false
+        },
+        "fbm-1": {
+            "type": "FBm",
+            "source": "dots-1",
+            "H": 0.5,
+            "lacunarity": 1.8,
+            "octaves": 6
+        },
+        "dots-1": {
+            "type": "Dots",
+            "low": 0.5,
+            "high": 1,
+            "mode": 0
+        }
+    }
+}

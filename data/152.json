@@ -1,0 +1,65 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 8,
+            "source": "gradient-1",
+            "bump": "gray-1",
+            "bumpScale": 10
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1
+        },
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1"
+        }
+    },
+    "functions": {
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "improvednoise-1",
+            "invert": false
+        },
+        "improvednoise-1": {
+            "type": "ImprovedNoise",
+            "seed": 11
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                106,
+                192,
+                122,
+                30
+            ],
+            [
+                190,
+                94,
+                231,
+                238
+            ],
+            [
+                251,
+                255,
+                255,
+                255
+            ]
+        ]
+    }
+}

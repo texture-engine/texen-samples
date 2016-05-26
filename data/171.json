@@ -1,0 +1,45 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 1,
+            "source": "gray-1"
+        }
+    },
+    "textures": {
+        "gray-1": {
+            "type": "Gray",
+            "source": "normalize-1",
+            "min": 0,
+            "max": 1,
+            "invert": false
+        }
+    },
+    "functions": {
+        "translate-1": {
+            "type": "Translate",
+            "source": "fbm-1",
+            "z": 0,
+            "y": 0,
+            "x": -0.5
+        },
+        "normalize-1": {
+            "type": "Normalize",
+            "source": "translate-1",
+            "invert": false
+        },
+        "fbm-1": {
+            "type": "FBm",
+            "source": "mandelbrot-1",
+            "H": 0.75,
+            "lacunarity": 2,
+            "octaves": 7
+        },
+        "mandelbrot-1": {
+            "type": "Mandelbrot",
+            "max": 4,
+            "iterations": 128,
+            "mode": 1
+        }
+    }
+}

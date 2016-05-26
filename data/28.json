@@ -1,0 +1,88 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1,
+            "source": "blendcolors-4",
+            "fill": false
+        }
+    },
+    "textures": {
+        "shadingflat-1": {
+            "type": "ShadingFlat",
+            "source": "heighthill-1",
+            "mingray": 60,
+            "maxgray": 254,
+            "lightX": 1,
+            "lightY": -1.2,
+            "lightZ": 1,
+            "size": 22
+        },
+        "shadow-1": {
+            "type": "Shadow",
+            "source": "heighthill-1",
+            "mingray": 245,
+            "maxgray": 255,
+            "lightX": 1,
+            "lightY": 1,
+            "lightZ": 1,
+            "accuracy": 1,
+            "size": 128
+        },
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "heighthill-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": false
+        },
+        "blendcolors-3": {
+            "type": "Blend",
+            "mode": 3,
+            "source": "shadingflat-1",
+            "blend": "shadow-1"
+        },
+        "blendcolors-4": {
+            "type": "Blend",
+            "mode": 3,
+            "source": "gradient-1",
+            "blend": "blendcolors-3"
+        }
+    },
+    "functions": {
+        "heighthill-1": {
+            "type": "Scale",
+            "source": "noise-1",
+            "x": 4,
+            "y": 4,
+            "z": 4
+        },
+        "noise-1": {
+            "type": "Noise",
+            "seed": 0
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                1,
+                140,
+                180,
+                47
+            ],
+            [
+                6,
+                240,
+                251,
+                188
+            ],
+            [
+                87,
+                206,
+                226,
+                184
+            ]
+        ]
+    }
+}

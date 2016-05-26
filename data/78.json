@@ -1,0 +1,110 @@
+{
+    "render": {
+        "texture-1": {
+            "type": "Texture",
+            "scale": 1,
+            "source": "alphacolors-2",
+            "fill": true
+        }
+    },
+    "textures": {
+        "shadingflat-1": {
+            "type": "ShadingFlat",
+            "source": "heighthill-1",
+            "mingray": 0,
+            "maxgray": 255,
+            "lightX": 1,
+            "lightY": 1,
+            "lightZ": 1,
+            "size": 33
+        },
+        "shadow-1": {
+            "type": "Shadow",
+            "source": "heighthill-1",
+            "mingray": 181,
+            "maxgray": 255,
+            "lightX": 1,
+            "lightY": 0,
+            "lightZ": 1,
+            "accuracy": 1,
+            "size": 11
+        },
+        "alphacolors-1": {
+            "type": "BlendAlpha",
+            "alpha": 0.7,
+            "source": "gradient-1",
+            "blend": "shadingflat-1"
+        },
+        "gradient-1": {
+            "type": "Gradient",
+            "source": "heighthill-1",
+            "min": 0,
+            "max": 1,
+            "gradient": "gradient-1",
+            "invert": false
+        },
+        "alphacolors-2": {
+            "type": "BlendAlpha",
+            "alpha": 0.95,
+            "source": "alphacolors-1",
+            "blend": "shadow-1"
+        }
+    },
+    "functions": {
+        "heighthill-1": {
+            "type": "HeightHill",
+            "mode": 0,
+            "seed": 39,
+            "iterations": 99,
+            "hillmin": 0.04,
+            "hillmax": 0.08,
+            "size": 222
+        }
+    },
+    "gradients": {
+        "gradient-1": [
+            [
+                0,
+                191,
+                34,
+                40
+            ],
+            [
+                12,
+                218,
+                32,
+                55
+            ],
+            [
+                34,
+                255,
+                162,
+                47
+            ],
+            [
+                71,
+                122,
+                139,
+                34
+            ],
+            [
+                149,
+                169,
+                169,
+                169
+            ],
+            [
+                249,
+                240,
+                255,
+                242
+            ],
+            [
+                255,
+                240,
+                255,
+                255
+            ]
+        ]
+    }
+}

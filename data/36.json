@@ -1,0 +1,68 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 10,
+            "source": "gray-0",
+            "fill": false
+        }
+    },
+    "textures": {
+        "gray-0": {
+            "type": "Gray",
+            "source": "blend-2",
+            "min": 0.4,
+            "max": 1,
+            "invert": false
+        }
+    },
+    "functions": {
+        "translate-1": {
+            "type": "Translate",
+            "x": 3.1415,
+            "source": "normalize-0",
+            "y": 3.1415
+        },
+        "normalize-0": {
+            "type": "Normalize",
+            "source": "blend-1",
+            "invert": false,
+            "signed": false,
+            "outMax": 0.4
+        },
+        "function-1": {
+            "type": "Normalize",
+            "source": "misc-1",
+            "invert": false,
+            "signed": false,
+            "outMax": null
+        },
+        "misc-1": {
+            "type": "Misc",
+            "misc": 5
+        },
+        "function-2": {
+            "type": "Normalize",
+            "source": "misc-2",
+            "signed": false,
+            "invert": false,
+            "outMax": null
+        },
+        "misc-2": {
+            "type": "Misc",
+            "misc": 1
+        },
+        "blend-1": {
+            "type": "Blend",
+            "source": "function-1",
+            "blend": "function-2",
+            "mode": 18
+        },
+        "blend-2": {
+            "type": "Blend",
+            "source": "blend-1",
+            "blend": "translate-1",
+            "mode": 8
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "render": {
+        "texture": {
+            "type": "Texture",
+            "scale": 9.7,
+            "source": "gray-0",
+            "fill": false
+        }
+    },
+    "textures": {
+        "gray-0": {
+            "type": "Gray",
+            "source": "blend-1",
+            "min": -1,
+            "max": 1,
+            "invert": true
+        }
+    },
+    "functions": {
+        "misc-1": {
+            "type": "Misc",
+            "misc": 7
+        },
+        "misc-2": {
+            "type": "Misc",
+            "misc": 4
+        },
+        "blend-1": {
+            "type": "Blend",
+            "source": "misc-2",
+            "blend": "misc-1",
+            "mode": 5
+        }
+    }
+}
